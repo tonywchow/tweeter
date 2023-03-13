@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+.container-head {
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+
+#logo {
+  display: flex;
+  font-family: "Bungee", cursive, sans-serif;
+  margin-left: 1.5em;
+  font-size: xx-large;
+  align-items: flex-end;
+}
+
+#new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5em;
+  font-size: medium;
+}
+
+#double-arrows {
+  color: red;
+}
