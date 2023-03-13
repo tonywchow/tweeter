@@ -11,6 +11,8 @@ nav {
   height: 100px;
   background-color: #4056a1;
   color: #ffffff;
+  position: fixed;
+  top: 0;
 }
 
 #logo {
@@ -20,9 +22,6 @@ nav {
   align-items: flex-end;
   font-size: larger;
   margin-bottom: 0.75em;
-}
-
-.tweet {
 }
 
 #new-tweet {
@@ -40,7 +39,4 @@ nav {
   justify-content: center;
   margin-right: 1.5em;
   margin-bottom: 0.5em;
-}
-
-header {
 }
