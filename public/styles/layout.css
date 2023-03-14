@@ -26,3 +26,13 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  font-size: normal;
+  margin: auto;
+  background-color: #f4f1ec;
+}
