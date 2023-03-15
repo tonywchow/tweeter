@@ -23,7 +23,7 @@ nav {
   margin-bottom: 0.75em;
 }
 
-#new-tweet {
+#tweet {
   flex-direction: row;
   justify-content: center;
   align-items: center;
