@@ -6,6 +6,7 @@ article.tweet-container {
   border: solid;
   margin: 20px 0px 20px 0px;
   padding: 0.5em;
+  box-shadow: none;
 }
 
 article.tweet-container header {
