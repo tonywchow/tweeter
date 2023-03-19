@@ -8,4 +8,13 @@ $(document).ready(function () {
       $(this).css("box-shadow", "none");
     }
   );
+
+  $(".fa-solid fa-flag").hover(
+    function () {
+      $(this).css("background-color", "#F1E190");
+    },
+    function () {
+      $(this).css("background-color", "init");
+    }
+  );
 });

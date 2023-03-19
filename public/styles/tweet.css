@@ -6,7 +6,10 @@ article.tweet-container {
   border: solid;
   margin: 20px 0px 20px 0px;
   padding: 0.5em;
-  box-shadow: none;
+}
+
+article.tweet-container:hover {
+  box-shadow: 4px 4px #d7d9f5;
 }
 
 article.tweet-container header {
@@ -43,4 +46,16 @@ article.tweet-container footer {
   margin: 0px 0px 10px 0px;
   font-size: medium;
   padding: 0em 0.5em 0em 0.5em;
+}
+
+.fa-flag:hover {
+  color: #ebcf41;
+}
+
+.fa-retweet:hover {
+  color: #ebcf41;
+}
+
+.fa-heart:hover {
+  color: #ebcf41;
 }
