@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -51,12 +52,12 @@
       </div>
     </div>
   </nav>
-  <header>
+  <header class="profile-header">
     <div class="profile-picture">
         <img src="/images/profile-hex.png"> 
     </div>
-    <div class="name">
-        <h2 class="name">Joe Mama</h2>
+    <div class="profile-name">
+        <h2 class="profile-name">Joe Name</h2>
     </div>
   </header>
 
@@ -79,6 +80,33 @@
           </form>
         </div>
       </section>
+      <div class="tweets">
+        <article class="tweet-container">
+          <header>
+            <div class="tweet-name">
+              <img src="/images/profile-hex.png"> 
+              <h3>Name</h3>
+            </div>
+            <div class="username">
+              <h3>Username</h3>
+            </div>
+          </header>
+          <div class="tweet-message">
+            <h4>Hello World</h4>
+          </div>
+          <footer class="tweet-container">
+            <div class="time-stamp">
+              <h5>Time stamp and icons</h5>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+        
+      </div>
     </main>
   </body>
 </html>

@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-header {
+header.profile-header {
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -22,7 +22,7 @@ header {
   height: 100%;
 }
 
-.name {
+.profile-name {
   display: flex;
   justify-content: flex-start;
   align-items: center;

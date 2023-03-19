@@ -1,4 +1,4 @@
-section {
+section.new-tweet {
   display: flex;
   flex-direction: column;
   padding-top: 1em;
@@ -18,7 +18,7 @@ section {
   font-size: medium;
   font-weight: 600;
   width: 100%;
-  height: 1.5em;
+  height: auto;
   border: none;
   /* white-space: nowrap; */
   padding-bottom: 0.5em;
