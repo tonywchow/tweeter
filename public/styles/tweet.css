@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+/* TODO FIX text height for everything inside the tweet box */
 
 article.tweet-container {
   border: solid;
@@ -18,7 +19,6 @@ article.tweet-container header {
   justify-content: space-between;
   padding: 0em 0.5em 0em 0.5em;
 }
-
 .tweet-name {
   display: flex;
   flex-direction: row;
