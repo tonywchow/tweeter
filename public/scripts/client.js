@@ -81,9 +81,3 @@ $(document).ready(function () {
 
   renderTweets(data);
 });
-
-// function timestamp(oldTime) {
-//   let datetime = Date.now()
-//   let difference = Date.now() - oldTime;
-
-// }
