@@ -95,6 +95,15 @@ $(document).ready(function () {
 
   $("form").submit(function (event) {
     event.preventDefault();
+    console.log($("#tweet-text").val().length);
+    if ($("#tweet-text").val().length > 140) {
+      return alert("You have more then 140 characters in your tweet");
+    }
+
+    if ($("#tweet-text").val().length == 0 || $("#tweet-text").val() === null) {
+      return alert("Please enter a tweet");
+    }
+
     $.ajax({
       method: "POST",
       url: "/tweets/",
