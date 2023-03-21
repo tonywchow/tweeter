@@ -88,10 +88,6 @@ $(document).ready(function () {
       url: "/tweets/",
     }).then((tweets) => renderTweets(tweets));
   }
-  $.ajax({
-    method: "GET",
-    url: "/tweets/",
-  }).then((tweets) => renderTweets(tweets));
 
   $("form").submit(function (event) {
     event.preventDefault();
