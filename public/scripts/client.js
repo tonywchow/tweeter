@@ -78,6 +78,18 @@ $(document).ready(function () {
       $(".tweets").append($listItem);
     }
   }
-
   renderTweets(data);
+
+  $("form").submit(function (event) {
+    event.preventDefault();
+    // let userInput = $(".text-space").val();
+    $.ajax({
+      type: "POST",
+      url: "/tweets/",
+      data: $(this).serialize(),
+      success: null,
+    });
+    console.log("I have been clicked");
+    console.log($(this).serialize());
+  });
 });
