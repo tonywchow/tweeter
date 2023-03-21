@@ -47,7 +47,7 @@ $(document).ready(function () {
     <article class="tweet-container">
     <header>
     <div class="tweet-name">
-    <img src="/images/profile-hex.png"> 
+    <img src=${tweetData.user.avatars}> 
     <h3>${tweetData.user.name}</h3>
     </div>
     <div class="username">
@@ -73,9 +73,10 @@ $(document).ready(function () {
   }
 
   function renderTweets(tweetArr) {
+    $(".tweets").empty();
     for (const tweet of tweetArr) {
       const $listItem = createTweetElement(tweet);
-      $(".tweets").append($listItem);
+      $(".tweets").prepend($listItem);
     }
   }
 
@@ -104,10 +105,12 @@ $(document).ready(function () {
       method: "POST",
       url: "/tweets/",
       data: $(this).serialize(),
-      success: loadTweets(),
+      success: loadTweets,
     });
     // TODO Remove the below console.log before submitting project
     console.log("I have been clicked");
     console.log($(this).serialize());
   });
+
+  loadTweets();
 });
