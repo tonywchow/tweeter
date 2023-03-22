@@ -19,7 +19,7 @@ $(document).ready(function () {
     </div>
     </header>
     <div class="tweet-message">
-    <h4>${tweetData.content.text}</h4>
+    <h4>${escape(tweetData.content.text)}</h4>
     </div>
     <footer class="tweet-container">
     <div class="time-stamp">
@@ -35,6 +35,12 @@ $(document).ready(function () {
 
     return $tweet;
   }
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   function renderTweets(tweetArr) {
     $(".tweets").empty();
