@@ -1,7 +1,15 @@
 section.new-tweet {
   display: flex;
   flex-direction: column;
-  padding-top: 1em;
+  /* padding-top: 1em; */
+}
+
+.error {
+  display: none;
+  color: red;
+  justify-content: center;
+  border: solid;
+  margin: 1em 1em 0em 1em;
 }
 
 .prompt {
@@ -10,6 +18,7 @@ section.new-tweet {
   font-weight: 600;
   color: #545149;
   margin-bottom: 0.5em;
+  padding-top: 1em;
 }
 
 .text-space {

@@ -42,6 +42,18 @@ $(document).ready(function () {
     return div.innerHTML;
   };
 
+  function generateError(error) {
+    return $(`
+      <h3>${error}</h3>
+    `);
+  }
+
+  // $("#tweet-text").error(function () {
+  //   $(".error-message").slideDown("slow", function () {
+  //     generateError();
+  //   });
+  // });
+
   function renderTweets(tweetArr) {
     $(".tweets").empty();
     for (const tweet of tweetArr) {
@@ -53,27 +65,39 @@ $(document).ready(function () {
   function loadTweets() {
     $.ajax({
       method: "GET",
-      url: "/tweets/",
+      url: "/tweets",
     }).then((tweets) => renderTweets(tweets));
   }
 
   $("form").submit(function (event) {
     event.preventDefault();
+    // TODO delete this console.log preform submitting
     console.log($("#tweet-text").val().length);
-    if ($("#tweet-text").val().length > 140) {
-      return alert("You have more then 140 characters in your tweet");
+    let tweetText = $("#tweet-text").val();
+    $(".error").css("display", "none");
+    $(".error-message").text("");
+    if (tweetText.length > 140) {
+      let error = "You have more then 140 characters in your tweet";
+      $(".error").css("display", "flex");
+      $(".error").slideDown();
+      $(".error-message").text(error);
+    } else if (tweetText.length == 0 || tweetText === null) {
+      let error = "Text field is empty, please enter a tweet";
+      $(".error").css("display", "flex");
+      $(".error").slideDown();
+      $(".error-message").text(error);
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $(this).serialize(),
+        success: () => {
+          loadTweets();
+          $("#tweet-text").val(" ");
+          $(".counter").val(140);
+        },
+      });
     }
-
-    if ($("#tweet-text").val().length == 0 || $("#tweet-text").val() === null) {
-      return alert("Please enter a tweet");
-    }
-
-    $.ajax({
-      method: "POST",
-      url: "/tweets/",
-      data: $(this).serialize(),
-      success: loadTweets,
-    });
   });
 
   loadTweets();
