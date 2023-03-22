@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-nav {
+#navbar {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -12,6 +12,7 @@ nav {
   color: #ffffff;
   position: fixed;
   top: 0;
+  transition: top 0.3s;
 }
 
 #logo {

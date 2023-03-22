@@ -4,44 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const tweetData = {
-//   user: {
-//     name: "Newton",
-//     avatars: "https://i.imgur.com/73hZDYK.png",
-//     handle: "@SirIsaac",
-//   },
-//   content: {
-//     text: "If I have seen further it is by standing on the shoulders of giants",
-//   },
-//   created_at: 1461116232227,
-// };
-
-// const data = [
-//   {
-//     user: {
-//       name: "Newton",
-//       avatars: "https://i.imgur.com/73hZDYK.png",
-//       handle: "@SirIsaac",
-//     },
-//     content: {
-//       text: "If I have seen further it is by standing on the shoulders of giants",
-//     },
-//     created_at: 1461116232227,
-//   },
-//   {
-//     user: {
-//       name: "Descartes",
-//       avatars: "https://i.imgur.com/nlhLi3I.png",
-//       handle: "@rd",
-//     },
-//     content: {
-//       text: "Je pense , donc je suis",
-//     },
-//     created_at: 1461113959088,
-//   },
-// ];
-
 $(document).ready(function () {
+  //Create HTML template
   function createTweetElement(tweetData) {
     let $tweet = `
     <article class="tweet-container">
@@ -80,9 +44,6 @@ $(document).ready(function () {
     }
   }
 
-  // NOTE Tweets are only loaded after a new tweet is submitted. Is that correct?
-  // NOTE If i have the ajax get request outside the function it will load the tweets.
-
   function loadTweets() {
     $.ajax({
       method: "GET",
@@ -107,9 +68,6 @@ $(document).ready(function () {
       data: $(this).serialize(),
       success: loadTweets,
     });
-    // TODO Remove the below console.log before submitting project
-    console.log("I have been clicked");
-    console.log($(this).serialize());
   });
 
   loadTweets();
