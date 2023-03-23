@@ -5,6 +5,14 @@
  */
 
 $(document).ready(function () {
+  function tweetToggler() {
+    $("#toggle-tweet").click(function () {
+      $(".new-tweet").css("display", "flex");
+      $(".new-tweet").slideDown();
+    });
+  }
+
+  tweetToggler();
   //Create HTML template
   function createTweetElement(tweetData) {
     let $tweet = `
@@ -71,11 +79,9 @@ $(document).ready(function () {
 
   $("form").submit(function (event) {
     event.preventDefault();
-    // TODO delete this console.log preform submitting
-    console.log($("#tweet-text").val().length);
     let tweetText = $("#tweet-text").val();
     $(".error").css("display", "none");
-    $(".error-message").text("");
+    $(".error-message").empty();
     if (tweetText.length > 140) {
       let error = "You have more then 140 characters in your tweet";
       $(".error").css("display", "flex");
@@ -93,7 +99,7 @@ $(document).ready(function () {
         data: $(this).serialize(),
         success: () => {
           loadTweets();
-          $("#tweet-text").val(" ");
+          $("#tweet-text").val("");
           $(".counter").val(140);
         },
       });

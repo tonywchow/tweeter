@@ -1,5 +1,5 @@
 section.new-tweet {
-  display: flex;
+  display: none;
   flex-direction: column;
   /* padding-top: 1em; */
 }
@@ -18,7 +18,7 @@ section.new-tweet {
   font-weight: 600;
   color: #545149;
   margin-bottom: 0.5em;
-  padding-top: 1em;
+  padding-top: 3em;
 }
 
 .text-space {

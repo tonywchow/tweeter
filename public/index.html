@@ -58,12 +58,15 @@
       <div>
         <span id="logo">tweeter</span>
       </div>
-      <div>
+      <div id="toggle-tweet">
         <div>
           <span id="tweet"><b>Write</b> a new tweet</span>
         </div>
         <div>
-          <span class="fa-solid fa-angle-double-down" id="double-arrows"></span>
+          <span
+            class="fa-solid fa-angle-double-down fa-bounce"
+            id="double-arrows"
+          ></span>
         </div>
       </div>
     </nav>
@@ -72,7 +75,7 @@
         <img id="picture" src="/images/profile-hex.png" />
       </div>
       <div class="profile-name">
-        <h2 class="profile-name">Joe Name</h2>
+        <h2 class="profile-name">Bart Simpson</h2>
       </div>
     </header>
 
@@ -82,7 +85,7 @@
         <!-- <h2>Compose Tweet</h2> -->
         <div>
           <div class="error">
-            <h3 class="error-message"></h3>
+            <p class="error-message"></p>
           </div>
           <form method="POST" action="/tweets/">
             <div class="prompt">
