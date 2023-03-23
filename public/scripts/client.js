@@ -11,7 +11,6 @@ $(document).ready(function () {
       $(".new-tweet").css("display", "flex");
     });
   }
-
   tweetToggler();
   //Create HTML template
   function createTweetElement(tweetData) {
@@ -49,18 +48,6 @@ $(document).ready(function () {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-
-  function generateError(error) {
-    return $(`
-      <h3>${error}</h3>
-    `);
-  }
-
-  // $("#tweet-text").error(function () {
-  //   $(".error-message").slideDown("slow", function () {
-  //     generateError();
-  //   });
-  // });
 
   function renderTweets(tweetArr) {
     $(".tweets").empty();
@@ -108,3 +95,5 @@ $(document).ready(function () {
 
   loadTweets();
 });
+
+module.exports()

@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -35,4 +36,27 @@ body {
   font-size: normal;
   margin: auto;
   background-color: #f4f1ec;
+}
+
+.to-top {
+  /* background-color: #e3a419; */
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 75px;
+  color: #e3a419;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
 }
