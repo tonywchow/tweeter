@@ -5,10 +5,9 @@
 header.profile-header {
   display: flex;
   flex-direction: column;
-  height: 400px;
-  /* NOTE Add 120px to height Total: 520px */
+  height: 450px;
   width: 100%;
-  background-color: #df9a00;
+  background-color: #e3a419;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   width: auto;
 }
@@ -27,5 +26,9 @@ header.profile-header {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  margin: 0px;
+  /* margin: 0px; */
+}
+
+.profile-name h2 {
+  color: white;
 }
