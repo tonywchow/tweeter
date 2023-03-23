@@ -7,8 +7,8 @@
 $(document).ready(function () {
   function tweetToggler() {
     $("#toggle-tweet").click(function () {
+      $(".new-tweet").slideToggle();
       $(".new-tweet").css("display", "flex");
-      $(".new-tweet").slideDown();
     });
   }
 
