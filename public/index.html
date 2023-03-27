@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -40,6 +42,8 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media-queries.css" type="text/css" />
+
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -52,6 +56,8 @@
     ></script>
     <script type="text/javascript" src="/scripts/hiding-nav-bar.js"></script>
     <script type="text/javascript" src="/scripts/composer.js"></script>
+
+
   </head>
 
   <body>
@@ -71,47 +77,49 @@
         </div>
       </div>
     </nav>
-    <header class="profile-header">
-      <div class="profile-picture">
-        <img id="picture" src="/images/profile-hex.png" />
-      </div>
-      <div class="profile-name">
-        <h2 class="profile-name">Bart Simpson</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
-        <div>
-          <div class="error">
-            <p class="error-message"></p>
-          </div>
-          <form method="POST" action="/tweets/">
-            <div class="prompt">
-              <label for="tweet-text">What are you humming about?</label>
-            </div>
-            <div>
-              <textarea
-                class="text-space"
-                name="text"
-                id="tweet-text"
-              ></textarea>
-            </div>
-            <div class="footer">
-              <button id="button" type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text"
-                >140</output
-              >
-            </div>
-          </form>
+    <div id="desktop-view">
+      <header class="profile-header">
+        <div class="profile-picture">
+          <img id="picture" src="/images/profile-hex.png" />
         </div>
-      </section>
-      <div class="tweets"></div>
-      <a href="#" class="to-top">
-        <span class="fa-solid fa-circle-arrow-up fa-bounce"></span>
-      </a>
-    </main>
+        <div class="profile-name">
+          <h2 class="profile-name">Bart Simpson</h2>
+        </div>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <!-- <h2>Compose Tweet</h2> -->
+          <div>
+            <div class="error">
+              <p class="error-message"></p>
+            </div>
+            <form method="POST" action="/tweets/">
+              <div class="prompt">
+                <label for="tweet-text">What are you humming about?</label>
+              </div>
+              <div>
+                <textarea
+                  class="text-space"
+                  name="text"
+                  id="tweet-text"
+                ></textarea>
+              </div>
+              <div class="footer">
+                <button id="button" type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text"
+                  >140</output
+                >
+              </div>
+            </form>
+          </div>
+        </section>
+        <div class="tweets"></div>
+        <a href="#" class="to-top">
+          <span class="fa-solid fa-circle-arrow-up fa-bounce"></span>
+        </a>
+      </main>
+    </div>
   </body>
 </html>

@@ -5,11 +5,10 @@
 header.profile-header {
   display: flex;
   flex-direction: column;
-  height: 450px;
+  height: 475px;
   width: 100%;
   background-color: #e3a419;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
-  width: auto;
 }
 
 .profile-picture {

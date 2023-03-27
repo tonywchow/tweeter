@@ -18,7 +18,7 @@ section.new-tweet {
   font-weight: 600;
   color: #545149;
   margin-bottom: 0.5em;
-  padding-top: 3em;
+  padding-top: 1em;
 }
 
 .text-space {
@@ -27,7 +27,7 @@ section.new-tweet {
   font-size: medium;
   font-weight: 600;
   width: 100%;
-  height: auto;
+  height: 25px;
   border: none;
   /* white-space: nowrap; */
   padding-bottom: 0.5em;

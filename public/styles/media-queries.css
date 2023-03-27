@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+  #navbar {
+    background-color: #4056a1;
+  }
+
+  #desktop-view {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    margin: 100px auto auto auto;
+    width: 90%;
+    justify-content: space-evenly;
+  }
+
+  header.profile-header {
+    width: 600px;
+    height: 400px;
+    margin-right: 50px;
+  }
+
+  header.profile-header,
+  .container {
+    margin-top: 75px;
+  }
+
+  .error {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .prompt {
+    padding-top: 1em;
+  }
+
+
+}
