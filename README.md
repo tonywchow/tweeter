@@ -21,9 +21,13 @@ This project incorporates the following:
 
 !["Screenshot of Desktop Front Page"](./docs/Desktop%20Front%20Page.png)
 
-### Tweeter Toggler
+### Mobile to Desktop Transition
 
-!["Screenshot of Mobile to Desktop Transition"](./docs/Mobile%20Desktop%20Transition.gif)
+!["GIF of Mobile to Desktop Transition"](./docs/Mobile%20Desktop%20Transition.gif)
+
+### Stretch: Tweet Toggler & Scroll to Top
+
+!["GIF of Tweet Toggler & Scroll to Top"](./docs/Tweet%20Toggler%20and%20Scroll%20to%20Top.gif)
 
 ## Dependencies
 
