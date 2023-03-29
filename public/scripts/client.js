@@ -5,13 +5,16 @@
  */
 
 $(document).ready(function () {
+  // Stretch exercise: Toggles the tweet form when "Write a new tweet" is clicked
   function tweetToggler() {
     $("#toggle-tweet").click(function () {
       $(".new-tweet").slideToggle();
       $(".new-tweet").css("display", "flex");
     });
   }
+
   tweetToggler();
+
   //Create HTML template
   function createTweetElement(tweetData) {
     let $tweet = `
@@ -48,7 +51,7 @@ $(document).ready(function () {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-
+  //loops through tweet database and utilizes createTweetElement function to create HTML template for each tweet in the database.
   function renderTweets(tweetArr) {
     $(".tweets").empty();
     for (const tweet of tweetArr) {
@@ -56,14 +59,14 @@ $(document).ready(function () {
       $(".tweets").prepend($listItem);
     }
   }
-
+  //AJAX get method to load the tweets in URL /tweets and passes it to the renderTweets function to create an HTML template.
   function loadTweets() {
     $.ajax({
       method: "GET",
       url: "/tweets",
     }).then((tweets) => renderTweets(tweets));
   }
-
+  // On submit, it will catch errors and use AJAX to append the new tweet to the page without refreshing. On successful execution of the AJAX, it will clear the text box and reset the counter.
   $("form").submit(function (event) {
     event.preventDefault();
     let tweetText = $("#tweet-text").val();
@@ -93,7 +96,8 @@ $(document).ready(function () {
     }
   });
 
+  // Calling the loadTweets function to load tweets existing in the database
   loadTweets();
 });
 
-module.exports()
+module.exports();

@@ -1,3 +1,7 @@
+/*
+Strech exercise: This function is for the scroll to top of page. When there is a vertical scroll of greater than 100 pixels, the function will activate the CSS to show the scroll to top arrow.
+*/
+
 $(document).ready(function () {
   const toTop = document.querySelector(".to-top");
   window.addEventListener("scroll", function () {
