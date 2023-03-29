@@ -21,9 +21,9 @@ This project incorporates the following:
 
 !["Screenshot of Mobile Front Page"](./docs/Desktop%20Front%20Page.png)
 
-### Tweeter Features
+### Tweeter Toggler
 
-!["Screenshot of Mobile Front Page"](./docs/Tweeter%20Features%20Showcase.mov)
+!["Screenshot of Mobile Front Page"](./docs/Tweet%20Toggler.mov)
 
 ## Dependencies
 
@@ -33,7 +33,7 @@ This project incorporates the following:
 - Chance
 - md5
 
-å## Getting Started
+## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
 2. Clone your repository onto your local device.
