@@ -19,11 +19,11 @@ This project incorporates the following:
 
 ### Front page (Desktop View)
 
-!["Screenshot of Mobile Front Page"](./docs/Desktop%20Front%20Page.png)
+!["Screenshot of Desktop Front Page"](./docs/Desktop%20Front%20Page.png)
 
 ### Tweeter Toggler
 
-!["Screenshot of Mobile Front Page"](./docs/Tweet%20Toggler.mov)
+!["Screenshot of Mobile to Desktop Transition"](./docs/Mobile%20Desktop%20Transition.gif)
 
 ## Dependencies
 
