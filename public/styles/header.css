@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 header.profile-header {
   display: flex;
   flex-direction: column;
